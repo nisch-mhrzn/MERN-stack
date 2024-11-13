@@ -1,9 +1,10 @@
+// make server neat and clean
 const express =require("express");
 const app = express();
 
-app.get('/',(req,res) =>{
-res.status(200).send("Welcome to the best website")
-})
+const router =require("./router/auth-router");
+//Mount the Router: To use the router in your main Express app, you can "mount" it at a specific URL prefix
+app.use("/api/auth",router);
 
 // make server listen
 const PORT = 5000;
