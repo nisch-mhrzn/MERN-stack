@@ -1,4 +1,5 @@
 // make server neat and clean
+require('dotenv').config();//to use dotenv
 const express = require("express");
 const app = express();
 const router = require("./router/auth-router");
