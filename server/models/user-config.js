@@ -6,13 +6,13 @@ const userSchema = new mongoose.Schema({//blueprint of registration form
     },
     email : {
         type: String,
-        require: true,
+        required: true,
         unique: true, //unique email
     },
     password : {
         type: String,
         required: true,
-        minlength: 8, //minimum 8 characters
+        minlength: 7, //minimum 8 characters
     },
     phone:{
         type: String,
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({//blueprint of registration form
 })
 
 //define the model or collection name
-const User = new mongoose.Model("User",userSchema);//automatically db saves it as users
+const User = mongoose.model("User",userSchema);//automatically db saves it as users
 
 module.exports = User;
 
