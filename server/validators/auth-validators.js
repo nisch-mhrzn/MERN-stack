@@ -16,8 +16,12 @@ const signupSchema = z.object({
   phone: z
     .string({ required_error: "Phone number is required" })
     .trim()
-    .min(7, { message: "Phone number must be at least 7 characters" })
-    .max(10, { message: "Phone number cannot exceed 15 characters" }),
+    .min(10, { message: "Phone number must be at least 7 characters" })
+    .max(20, { message: "Phone number cannot exceed 15 characters" }),
+    password: z
+    .string({ required_error: "Password is required" })
+    .min(7, { message:"Password must be at least 7 characters" })
+    .max(255, { message:"Password cannot exceed 255 characters" })
 });
 
 module.exports = signupSchema;

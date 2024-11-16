@@ -38,8 +38,7 @@ const register = async (req, res) => {
         userId: userCreated._id.toString(),
       });
   } catch (error) {
-    console.error(error);
-    res.status(400).send("Server Error");
+    next(error);
   }
 };
 
