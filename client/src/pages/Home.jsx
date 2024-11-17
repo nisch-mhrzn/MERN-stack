@@ -1,4 +1,4 @@
 export const Home = () => {
-    return <h1>Oh my god. Chuppa</h1>
+    return <h1>Bebi Chuppa</h1>
 }
 
