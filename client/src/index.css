@@ -45,3 +45,7 @@ a {
   letter-spacing: 0.1rem;
   font-size: 1.8rem;
 }
+
+li{
+  list-style: none;
+}

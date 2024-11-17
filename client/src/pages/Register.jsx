@@ -41,7 +41,7 @@ const handleSubmit = (e) => {
                 />
               </div>
               <div className="registration-form">
-                <h1 className="main-heading mb-3">Register</h1>
+                <h1 className="main-heading mb-3">Registration Form</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
                   <div>
