@@ -442,7 +442,7 @@ a.active{
       border: 1px solid var(--helper-color); /* Use helper color for border */
       border-radius: 0.8rem;
      
-      color: var(--dark-color); /* Ensure readable text */
+      
     }
 
     & button {
