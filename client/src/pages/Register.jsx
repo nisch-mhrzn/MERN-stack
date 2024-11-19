@@ -22,6 +22,7 @@ const handleSubmit = (e) => {
   e.preventDefault();
   alert(user);
   console.log(user);
+  
 }
 
 

@@ -167,12 +167,8 @@ a.active{
 /** -----------------------
 ** contact section css
 ** -------------------------  */
-/** -----------------------
-** contact section css
-** -------------------------  */
 .section-contact {
   padding: 6rem 0; /* Add top and bottom padding */
-
 
   & .contact-content {
     padding: 0;
@@ -181,7 +177,7 @@ a.active{
     & h1 {
       margin-bottom: 3.2rem;
       font-size: 4.8rem; /* Slightly smaller for balance */
-
+    
     }
     & p {
       font-size: 2rem;
@@ -211,7 +207,7 @@ a.active{
   }
 
   & .section-form {
-
+ 
     border-radius: 1rem; /* Rounded corners */
     padding: 4rem; /* Padding for better spacing */
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05); /* Soft shadow effect */
@@ -227,7 +223,7 @@ a.active{
       margin-bottom: 0.8rem; /* Compact margin */
       text-transform: capitalize;
       font-size: 1.6rem; /* Maintain font size */
-    
+     
     }
 
     & input,
@@ -238,14 +234,14 @@ a.active{
       border: 1px solid var(--helper-color); /* Original helper color */
       border-radius: 0.8rem;
       outline: none; /* Remove default outline */
-     
+      
       transition: all 0.3s ease; /* Smooth transition */
     }
 
     & input:focus,
     & textarea:focus {
       border-color: var(--btn-color); /* Button color for focus */
-     
+      background: var(--bg-color); /* Keep background consistent */
     }
 
     & textarea {
@@ -258,7 +254,7 @@ a.active{
       font-size: 1.8rem;
       padding: 1.2rem 0;
       border-radius: 0.8rem;
-     
+      background: var(--btn-color); /* Original button color */
       color: #fff;
       cursor: pointer;
       transition: background 0.3s ease;
@@ -297,6 +293,307 @@ a.active{
 
     & button {
       font-size: 1.6rem; /* Compact button */
+    }
+  }
+}
+
+
+/* pseduo elements  */
+.main-heading {
+  position: relative;
+  text-transform: capitalize;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 0.5rem;
+    background-color: var(--btn-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover,
+  a.active {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* erro page */
+
+#error-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#error-page .contact{
+  max-width: 70rem;
+  text-align: center;
+}
+
+.content h2.header {
+  font-size: 18vw;
+  line-height: 1em;
+  background: -webkit-repeating-linear-gradient(
+    -60deg,
+    #71b7e6,
+    var(--btn-color),
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    var(--btn-color),
+    #9b59b6
+  );
+  background-size: 500%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  position: relative;
+  -webkit-animation: animate 10s ease-in-out infinite;
+  animation: animate 10s ease-in-out infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.content h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+  justify-content: center;
+}
+.content .btns a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.content .btns a:hover {
+  background: var(--btn-color);
+  color: #fff;
+}
+/* edit only below this */
+/** -----------------------
+** registration section css
+** ------------------------- */
+.section-registration {
+  padding: 0 3.2rem;
+  
+
+  & .container {
+    padding-top: 3.2rem;
+    align-items: center;
+
+    & img {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  & .registration-form {
+    
+    padding: 2rem;
+    border-radius: 0.8rem; /* Slight rounding for aesthetics */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    & label {
+      display: block;
+      margin: 2.4rem 0 0.8rem 0;
+      text-transform: capitalize;
+      
+    }
+
+    & input {
+      width: 90%;
+      padding: 0.8rem 0.6rem;
+      border: 1px solid var(--helper-color); /* Use helper color for border */
+      border-radius: 0.8rem;
+     
+      color: var(--dark-color); /* Ensure readable text */
+    }
+
+    & button {
+      margin-top: 3.2rem;
+      width: 100%;
+      font-size: 1.6rem;
+      padding: 1rem;
+      border-radius: 0.8rem;
+      background-color: var(--btn-color); /* Button color */
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    & button:hover {
+      background-color: darken(var(--btn-color), 10%);
+    }
+  }
+}
+
+/** -----------------------
+** admin section css
+** ------------------------- */
+.adminNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+ 
+  border-radius: 0.8rem; /* Rounded edges */
+}
+
+.adminContainer {
+  display: grid;
+  padding-top: 0;
+  grid-template-columns: 1fr 3fr;
+}
+
+.adminList {
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+}
+
+.adminList li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  padding: 1rem;
+ 
+  border: 1px solid var(--helper-color);
+  border-radius: 0.5rem;
+}
+
+/** -----------------------
+** services section css
+** ------------------------- */
+.section-services {
+ 
+  padding: 3.2rem;
+
+  & .container:first-child {
+    padding: 0;
+  }
+
+  & .grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+  }
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border: 0.2rem solid var(--helper-color);
+    
+    border-radius: 1rem; /* Add rounding */
+    transition: transform 0.3s ease;
+
+    & .card-img {
+      text-align: center;
+
+      & img {
+        width: 70%;
+        height: auto;
+        filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.8)); /* Adjust shadow */
+      }
+    }
+
+    & .card-details {
+      padding: 2.4rem;
+
+      & .grid p {
+        font-size: 1.4rem;
+        color: var(--helper-color); /* Text color consistent with design */
+      }
+
+      & h2 {
+        font-size: 2.8rem; /* Adjust font size slightly */
+        margin: 1.2rem 0 2.4rem 0;
+        
+      }
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem); /* Slight lift on hover */
+    }
+  }
+}
+
+/** -----------------------
+** media query section css
+** ------------------------- */
+@media (width <= 998px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-services {
+    & .grid-three-cols {
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    }
+  }
+
+  .section-registration {
+    & .container {
+      & .reg-img img {
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (width <= 798px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .section-registration {
+    & .container {
+      & img {
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    & .registration-form {
+      & input {
+        width: 100%;
+        padding: 0.8rem;
+      }
     }
   }
 }
